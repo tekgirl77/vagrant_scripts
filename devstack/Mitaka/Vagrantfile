@@ -112,6 +112,6 @@ Vagrant.configure(2) do |config|
     sudo ./tools/create-stack-user.sh
     sudo chown -R stack:stack .
     sudo updatedb
-    sudo -u stack ./stack.sh 
+    # sudo -u stack ./stack.sh 
   SHELL
 end
