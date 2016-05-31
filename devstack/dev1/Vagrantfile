@@ -39,7 +39,7 @@ Vagrant.configure(2) do |config|
      # using config.foodshow.subdomain will host your vagrant instance at the
      # given subdomain - for instance, you could host at my_subdomain.ngrok.com
      # instead of 94f3bdd.ngrok.com
-     # config.foodshow.subdomain = 'my_subdomain'
+     config.foodshow.subdomain = 'multinode'
      # config.foodshow.authtoken is required if using config.foodshow.subdomain
      # add your authtoken below
      # config.foodshow.authtoken = 'my_authtoken'
@@ -75,7 +75,7 @@ Vagrant.configure(2) do |config|
   # information on available options.
   config.vm.provider "virtualbox" do |v|
     v.name = "ubuntu1404-devstack-vm"
-    v.customize ["modifyvm", :id, "--memory", "8192"]
+    v.customize ["modifyvm", :id, "--memory", "4096"]
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
   end
 
