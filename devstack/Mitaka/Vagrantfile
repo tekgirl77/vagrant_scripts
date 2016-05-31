@@ -93,6 +93,8 @@ Vagrant.configure(2) do |config|
     export DEBIAN_FRONTEND=noninteractive Dpkg::Options::=--force-confold
     sudo timedatectl set-timezone America/New_York
     sudo apt-get update
+    sudo apt-get install traceroute
+    sudo apt-get install iproute2
     sudo apt-get install python-software-properties software-properties-common python-keyring -y
     sudo apt-get install ubuntu-cloud-keyring -y
     sudo apt-get upgrade -y
