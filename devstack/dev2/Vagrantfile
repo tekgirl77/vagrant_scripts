@@ -43,7 +43,7 @@ Vagrant.configure(2) do |config|
      config.foodshow.subdomain = 'multinode'
      # config.foodshow.authtoken is required if using config.foodshow.subdomain
      # add your authtoken below
-     # config.foodshow.authtoken = 'my_authtoken'
+     config.foodshow.authtoken = 'secret'
      config.vm.network :forwarded_port, guest: 80, host: 8080, ngrok_proto: "http+https"
      else
       $stderr.print "Ngrok not enabled.\n"
