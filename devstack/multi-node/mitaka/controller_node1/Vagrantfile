@@ -29,7 +29,6 @@ Vagrant.configure(2) do |config|
   # config.vm.network "private_network", ip: "192.168.33.10"
     #config.vm.network "private_network", ip: "192.168.1.10"
   config.vm.network :forwarded_port, guest: 80, host: 8000
-  config.vm.network :forwarded_port, guest: 22, host: 22
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -59,7 +58,7 @@ Vagrant.configure(2) do |config|
   # information on available options.
   config.vm.provider "virtualbox" do |v|
     v.name = "mitaka-controller-node1"
-    v.customize ["modifyvm", :id, "--memory", "4096"]
+    v.customize ["modifyvm", :id, "--memory", "8192"]
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
   end
 
