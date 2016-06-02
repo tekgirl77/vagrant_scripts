@@ -58,7 +58,7 @@ Vagrant.configure(2) do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
   config.vm.provider "virtualbox" do |v|
-    v.name = "dev1-controller-vm"
+    v.name = "mitaka-controller-node1"
     v.customize ["modifyvm", :id, "--memory", "4096"]
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
   end
